@@ -1,0 +1,1070 @@
+{
+  "title": "Questionnaire médical du Dr Fanny Scopis",
+  "logoPosition": "right",
+  "completedHtml": "<h3>Merci d'avoir complété ce questionnaire.<br>Votre consultation est précieuse, et vos réponses aideront à mieux comprendre vos troubles du sommeil.</h3>",
+  "pages": [
+    {
+      "name": "intro",
+      "title": "Bienvenue dans votre questionnaire de préparation à la consultation sommeil.",
+      "elements": [
+        {
+          "type": "html",
+          "name": "introText",
+          "html": "<p>Merci de le compléter avant votre rendez-vous : vos réponses sont essentielles pour une prise en charge de qualité.</p> <p>Il ne vous prendra que quelques minutes, mais chaque réponse compte. Prenez le temps d’y répondre avec attention.</p> <p>Merci pour votre préparation en amont. Nous aurons prochainement l’occasion d’échanger lors de notre rendez-vous médical.</p>"
+        },
+        {
+          "type": "checkbox",
+          "name": "Consent",
+          "title": "Les informations recueillies sur ce formulaire par votre médecin, sont enregistrées dans un fichier informatisé pour la tenue du dossier patient.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "J’accepte que mes données soient traitées"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Informations générales",
+      "title": "Informations générales",
+      "elements": [
+        {
+          "type": "text",
+          "name": "Taille en cm",
+          "title": "Quelle est votre taille en cm ? :",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "text",
+          "name": "Poids en kg",
+          "startWithNewLine": false,
+          "title": "Quel est votre poids en kg ? :",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "expression",
+          "name": "IMC",
+          "startWithNewLine": false,
+          "title": "IMC",
+          "description": "Calculé automatiquement",
+          "expression": "iif({Taille en cm} > 0 and {Poids en kg} > 0, {Poids en kg} / (({Taille en cm} / 100) ^ 2), 0)",
+          "displayStyle": "decimal",
+          "maximumFractionDigits": 1
+        },
+        {
+          "type": "text",
+          "name": "question11",
+          "title": "Quel est votre métier ?",
+          "isRequired": true,
+          "placeholder": "Répondez ici..."
+        },
+        {
+          "type": "radiogroup",
+          "name": "question12",
+          "startWithNewLine": false,
+          "title": "Travaillez-vous en horaires décalés ?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Oui"
+            },
+            {
+              "value": "Item 2",
+              "text": "Non"
+            },
+            {
+              "value": "Item 3",
+              "text": "Parfois"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "Plainte principale",
+          "title": "Quels sont vos symptômes ?",
+          "description": "Choisissez-en autant que vous voulez",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Difficultés d’endormissement"
+            },
+            {
+              "value": "Item 2",
+              "text": "Réveils nocturnes"
+            },
+            {
+              "value": "Item 3",
+              "text": "Sommeil non-réparateur"
+            },
+            {
+              "value": "Item 4",
+              "text": "Ronflement gênant pour l’entourage"
+            },
+            {
+              "value": "Item 6",
+              "text": "Hypersomnies"
+            },
+            {
+              "value": "Item 7",
+              "text": "Ronflement gênant pour l’entourage"
+            },
+            {
+              "value": "Item 10",
+              "text": "Pauses respiratoires"
+            },
+            {
+              "value": "Item 11",
+              "text": "Hallucinations au moment de l'endormissement"
+            },
+            {
+              "value": "Item 12",
+              "text": "Hallucinations au moment du réveil- somnambulisme"
+            },
+            {
+              "value": "Item 13",
+              "text": "Paralysies du sommeil"
+            },
+            {
+              "value": "Item 14",
+              "text": "Réveils précoces en 2ème partie de nuit"
+            },
+            {
+              "value": "Item 15",
+              "text": "Sommeil agité avec mouvements nocturnes"
+            },
+            {
+              "value": "Item 16",
+              "text": "Bruxisme (grincement des dents ou mâchoires serrées la nuit)"
+            }
+          ],
+          "showOtherItem": true,
+          "otherText": "Autre"
+        },
+        {
+          "type": "checkbox",
+          "name": "Évaluer l’état dentaire du patient",
+          "startWithNewLine": false,
+          "title": "Avez-vous des traitements ou dispositifs dentaires particuliers ?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Implants dentaires"
+            },
+            {
+              "value": "Item 2",
+              "text": "Onlays"
+            },
+            {
+              "value": "Item 3",
+              "text": "Bridges (ponts dentaires)"
+            },
+            {
+              "value": "Item 4",
+              "text": "Prothèses partielles"
+            },
+            {
+              "value": "Item 5",
+              "text": "Prothèses totales"
+            },
+            {
+              "value": "Item 6",
+              "text": "Aucun"
+            }
+          ],
+          "showOtherItem": true,
+          "otherText": "Autre"
+        },
+        {
+          "type": "radiogroup",
+          "name": "Depuis quand",
+          "startWithNewLine": false,
+          "title": "Depuis quand en souffrez-vous ?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "< 3 mois"
+            },
+            {
+              "value": "Item 2",
+              "text": "< 6 mois"
+            },
+            {
+              "value": "Item 3",
+              "text": "< 12 mois"
+            },
+            {
+              "value": "Item 4",
+              "text": "Entre 1 an et 5 ans"
+            },
+            {
+              "value": "Item 5",
+              "text": "> de 5 ans"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "Médecin traitant",
+          "title": "Quel est le nom complet de votre médecin traitant ?",
+          "placeholder": "Répondez ici..."
+        },
+        {
+          "type": "text",
+          "name": "question5",
+          "startWithNewLine": false,
+          "title": "Veuillez vous assurer d'avoir un courrier de votre médecin traitant",
+          "placeholder": "Répondez ici..."
+        }
+      ]
+    },
+    {
+      "name": "Échelle de somnolence d’Epworth",
+      "title": "Échelle de somnolence d’Epworth",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_epworth",
+          "html": "<p><strong>Vous arrive-t-il de vous endormir ou d’être somnolent, et pas seulement fatigué, dans une des situations suivantes ?</strong></p>\n<p>Cette question fait référence à votre vie sur les mois derniers.</p>\n<p>Si vous ne vous êtes pas trouvé dans l’une de ces situations, imaginez comment elle aurait\npu vous affecter. Pour répondre, utilisez l’échelle suivante en entourant le chiffre le plus approprié à chaque situation.</p><ul><li>0 - Je ne suis jamais somnolent</li><li>1 - Faible chance de m’endormir</li><li>2 - Chance moyenne de m’endormir</li><li>3 - Forte chance de m’endormir</li></ul>"
+        },
+        {
+          "type": "panel",
+          "name": "epworth_panel",
+          "elements": [
+            {
+              "type": "expression",
+              "name": "Score total d'Epworth",
+              "title": "Score total d'Epworth",
+              "description": "Calculé automatiquement /24",
+              "expression": "{Grosse envie de dormir} + {Temps envie de dormir} + {Souvent envie de dormir} + {Toujours envie de dormir} + {Allongé l’après-midi} + {Conversation assise} + {Après déjeuner sans alcool} + {Arrêt en voiture}",
+              "displayStyle": "decimal"
+            },
+            {
+              "type": "rating",
+              "name": "Grosse envie de dormir",
+              "title": "Je n'ai jamais de grosse envie de dormir",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            },
+            {
+              "type": "rating",
+              "name": "Temps envie de dormir",
+              "title": "J'ai de temps en temps envie de dormir",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            },
+            {
+              "type": "rating",
+              "name": "Souvent envie de dormir",
+              "title": "J'ai souvent envie de dormir",
+              "description": "(cinéma, théâtre, salle d’attente)",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            },
+            {
+              "type": "rating",
+              "name": "Toujours envie de dormir",
+              "title": "J'ai toujours envie de dormir ou je m'endors",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            },
+            {
+              "type": "rating",
+              "name": "Allongé l’après-midi",
+              "title": "Allongé l’après-midi lorsque les circonstances le permettent.",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            },
+            {
+              "type": "rating",
+              "name": "Conversation assise",
+              "title": "Assis, en parlant avec quelqu’un.",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            },
+            {
+              "type": "rating",
+              "name": "Après déjeuner sans alcool",
+              "title": "Assis, tranquillement, après un déjeuner sans boisson alcoolisée.",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            },
+            {
+              "type": "rating",
+              "name": "Arrêt en voiture",
+              "title": "Au volant de la voiture, lors d’un arrêt de la circulation de quelques minutes.",
+              "isRequired": true,
+              "rateCount": 4,
+              "rateMin": 0,
+              "rateMax": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Attention à la somnolence au volant",
+      "visibleIf": "{Score total d'Epworth} >= 12",
+      "title": "Attention à la somnolence au volant",
+      "elements": [
+        {
+          "type": "html",
+          "name": "epworth_warning",
+          "html": "<p>Votre score au test de somnolence est élevé. La somnolence au volant représente un danger important pour vous et pour les autres.</p><p><strong>La somnolence, quelle qu'en soit la cause, contre-indique la conduite automobile. En savoir plus dans le « Arrêté du Journal Officiel du 28 03 2022 ».</strong></p>"
+        }
+      ]
+    },
+    {
+      "name": "Symptômes respiratoires",
+      "title": "Symptômes respiratoires",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "question1",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "Bonne respiration nasale",
+              "title": "Avez-vous une bonne respiration nasale ? \n",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non car rhinite chronique allergique"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Non car rhinite chronique non-allergique"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Non car déviation de la cloison"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Non, sans motif déterminé"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Autre"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Ronflements ou respiration bruyante",
+              "startWithNewLine": false,
+              "title": "Ronflez-vous (ou une respiration bruyante) ou vous le fait-on remarquer ?\n",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui tout le temps"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Oui parfois"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Oui lorsque je dors sur le dos"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Je ne sais pas, et je ne dors pas seul"
+                },
+                {
+                  "value": "Item 7",
+                  "text": "Je ne sais pas, je dors seul"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Arrêt ou irrégularité de respiration",
+              "startWithNewLine": false,
+              "title": "Vous a-t-on déjà dit que vous arrêtiez de respirer la nuit (ou respiration irrégulière) ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui tout le temps"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Oui parfois"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Oui lorsque je dors sur le dos"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Je ne sais pas, et je ne dors pas seul"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Je ne sais pas, et je ne dors pas seul"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Sensation de suffocation",
+              "title": "Vous arrive-t-il d’avoir une sensation de suffocation pendant la nuit ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Sommeil léger",
+              "startWithNewLine": false,
+              "title": "Avez-vous le sommeil léger ? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Parfois"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Au petit matin"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Nombre moyen de réveils la nuit",
+              "startWithNewLine": false,
+              "title": "Combien de fois en moyenne vous réveillez-vous pendant la nuit ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "> 5 fois"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "4 à 5 fois"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "2 à 5 fois"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "1 fois"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Irrégulier"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Nombre de réveils pour uriner",
+              "title": "Vous réveillez-vous pour aller uriner la nuit ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "oui",
+                  "text": "Oui"
+                },
+                {
+                  "value": "non",
+                  "text": "Non"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Nombre de réveils pour boire",
+              "visibleIf": "{Nombre de réveils pour uriner} = 'oui'",
+              "startWithNewLine": false,
+              "title": "Combien de fois vous réveillez-vous pour uriner ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "1",
+                  "text": "1 fois"
+                },
+                {
+                  "value": "2",
+                  "text": "2 fois ou plus"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "boire la nuit",
+              "startWithNewLine": false,
+              "title": "Allez-vous boire la nuit ?",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "3x ou plus"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "2x"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "1x"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Irrégulier"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Comportement de sommeil",
+      "title": "Comportement de sommeil\n",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "question2",
+          "elements": [
+            {
+              "type": "text",
+              "name": "Heure d’extinction de la lumière",
+              "title": "A quelle heure éteignez-vous la lumière pour dormir ?",
+              "inputType": "time"
+            },
+            {
+              "type": "text",
+              "name": "Combien de temps pour s’endormir",
+              "startWithNewLine": false,
+              "title": "Combien de temps vous faut-il pour vous endormir ? ",
+              "inputType": "time"
+            },
+            {
+              "type": "text",
+              "name": "Heure du lever le matin",
+              "startWithNewLine": false,
+              "title": "A quelle heure vous levez-vous du lit le matin ?",
+              "inputType": "time"
+            },
+            {
+              "type": "radiogroup",
+              "name": "Du soir ou du matin",
+              "title": "Vous estimez-vous plutôt du soir ou du matin ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Soir"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Matin"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Je ne sais pas"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Environnement calme",
+              "startWithNewLine": false,
+              "title": "Votre environnement de sommeil est-il calme ? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Non car mon conjoint ronfle"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Irrégulier"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Cauchemars ou d’autres comportements inhabituels",
+              "startWithNewLine": false,
+              "title": "Etes-vous dérangés par des cauchemars ou d’autres comportements inhabituels ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pendant la journée",
+      "title": "Pendant la journée",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "question3",
+          "isRequired": true,
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "Difficultés à se lever le matin",
+              "title": "Avez-vous du mal à vous lever le matin ?\n",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Ca dépend"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Coups de fatigue l’après-midi",
+              "startWithNewLine": false,
+              "title": "Avez-vous des coups de fatigue l’après-midi ? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Parfois"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Oui si je ne fais pas la sieste"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Sommeil réparateur quand suffisant",
+              "title": "Quand vous dormez suffisamment, ressentez-vous votre sommeil comme réparateur ? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Ca dépend"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Eveillé(e) toute la journée sans somnoler",
+              "startWithNewLine": false,
+              "title": "Arrivez-vous à rester éveillé(e) toute la journée sans somnoler (ou sans gros coup de barre) ? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Ca dépend"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Difficultés perturbent fonctionnement quotidien",
+              "title": "Considérez-vous que vos difficultés de sommeil perturbent votre fonctionnement quotidien ? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Oui, et c’est même apparent pour les autres"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Non"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "Description de la perturbation",
+              "startWithNewLine": false,
+              "title": "Comment décririez-vous cette perturbation ? ",
+              "description": "Choisissez-en autant que vous voulez",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Comment décririez-vous cette perturbation?"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Moins de concentration"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Moins d’attention"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Moins de mémoire"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Plus d’irritabilité / agressivité"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Autre"
+            },
+            {
+              "type": "radiogroup",
+              "name": "Épisode de somnolence au volant",
+              "title": "Au cours de l’année passée, avez-vous eu au moins un épisode de somnolence au volant qui a rendu la conduite pénible ou vous a forcé à vous arrêter ? ",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "Degré de préoccupation (de 0 à 4)",
+              "startWithNewLine": false,
+              "title": "Sur une échelle de 0 (pas du tout) à 4 (extrêmement), quel point diriez-vous que vous êtes inquiet / préoccupé par vos problèmes de sommeil ?",
+              "isRequired": true,
+              "rateMin": 0,
+              "rateMax": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "État de sante",
+      "title": "État de sante",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "question4",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "Antécédents cardio-respiratoires",
+              "title": "Avez-vous des antécédents cardio-respiratoires ?",
+              "description": "Choisissez-en autant que vous voulez",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 8",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Hypertension"
+                },
+                {
+                  "value": "Item 1",
+                  "text": "Arythmie"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Accident vasculaire cérébral (AVC)"
+                },
+                {
+                  "value": "Item 7",
+                  "text": "Infarctus du myocarde"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Pacemaker"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Asthme"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "BPCO"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Autre"
+            },
+            {
+              "type": "checkbox",
+              "name": "Troubles métaboliques",
+              "startWithNewLine": false,
+              "title": "Avez-vous des troubles métaboliques ?",
+              "choices": [
+                {
+                  "value": "Item 4",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 1",
+                  "text": "Diabète"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Hypercholestérolémie / hypertriglycéridémie"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Problème de thyroïde"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Autre"
+            },
+            {
+              "type": "radiogroup",
+              "name": "Antécédents d’anxio-dépression / burn-out",
+              "title": "Avez-vous des antécédents d’anxio-dépression / burn-out ?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Oui"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Non"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Oui mais ancien"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "Allergies",
+              "startWithNewLine": false,
+              "title": "Avez-vous des problèmes d’allergie ?\n",
+              "isRequired": true,
+              "choices": [
+                "Oui",
+                "Non"
+              ]
+            },
+            {
+              "type": "comment",
+              "name": "Détails sur les allergies",
+              "visibleIf": "{Allergies} = 'Oui'",
+              "title": "Veuillez préciser vos allergies",
+              "requiredIf": "{Allergies} = 'Oui'"
+            },
+            {
+              "type": "comment",
+              "name": "Traitements en cour",
+              "title": "Traitements en cours :\n",
+              "description": "Merci d’ apporter votre ordonnance lors de la consultation"
+            },
+            {
+              "type": "checkbox",
+              "name": "Antécédents familiaux",
+              "title": "Dans votre famille proche, quelqu’un souffre-t-il ou a-t-il souffert des maladies suivantes ?\n",
+              "showCommentArea": true,
+              "commentText": "Veuillez préciser qui souffre ou a souffert des maladies mentionnées",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Apnées du sommeil"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Narcolepsie"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Hypersomnie"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Insomnie"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Impatiences des jambes (syndrome des jambes sans repos)"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Maladies génétiques"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "Antécédents de Chirurgie",
+              "title": "Avez-vous des antécédents de chirurgie ?",
+              "description": "Cochez les interventions qui s'appliquent :",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Amygdalectomie (ablation des amygdales)"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Chirurgie nasale pour déviation de la cloison"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Chirurgie thyroïdienne"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Chirurgie du crâne ou du cerveau"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "noneText": "Aucune",
+              "otherText": "Autre"
+            },
+            {
+              "type": "checkbox",
+              "name": "Problèmes Articulaires",
+              "startWithNewLine": false,
+              "title": "Avez-vous des problèmes articulaires ?",
+              "description": "Cochez les interventions qui s'appliquent :",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Arthrose douloureuse"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Arthrose non douloureuse"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Hernies discales cervicales / dorsales / lombaires"
+                }
+              ],
+              "showOtherItem": true,
+              "showNoneItem": true,
+              "noneText": "Aucune",
+              "otherText": "Autre"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "showProgressBar": true,
+  "progressBarLocation": "bottom",
+  "clearInvisibleValues": "none",
+  "firstPageIsStartPage": true
+}
