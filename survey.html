@@ -1,0 +1,13 @@
+<script>
+  Survey.settings.showPoweredBy = "off";
+
+  fetch("survey.json")
+    .then(response => response.json())
+    .then(surveyJson => {
+      const survey = new Survey.Model(surveyJson);
+      survey.onComplete.add(() => {
+        document.getElementById("surveyContainer").innerHTML = "<h2>Merci pour votre réponse !</h2>";
+      });
+      Survey.SurveyNG.render("surveyContainer", { model: survey });
+    });
+</script>
